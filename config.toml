@@ -51,7 +51,7 @@ googleAnalytics = ""
     services = "Services"
     portfolio = "Portfolio"
     about = "About"
-    team = "Team"
+    team = "Staff"
     contact = "Contact"
 
     # Add custom links. Those can be pre- and postpended to the default menu above.
@@ -79,6 +79,14 @@ googleAnalytics = ""
     subtitle = ""
     buttonText = ""
 
+  [params.events]
+
+    [[params.events.event]]
+       title = "TTLAB Mentioned in the Trinidad Guardian"
+       link = "http://digital.guardian.co.tt/?iid=148172&startpage=22#folio=22"
+       description = "TTLAB was recently covered in an article written by Raymond Ramcharitar in the Trinidad Guardian"
+       date = "06/11/2016"
+       img = "articleinGuardian.png"
 
   # Services section
   [params.services]

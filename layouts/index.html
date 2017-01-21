@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+{{ partial "head.html" . }}
+
+<body id="page-top" class="index">
+{{ partial "nav.html" . }}
+{{ partial "hero.html" . }}
+
+<div class="row" style="padding-bottom: 100px;">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div>
+            TTLAB was formed to serve several purposes, (a) to solve local industrial problems using leading edge research and then to implement such solutions, (b) to provide our young scientists and engineers an environment to start or continue research and allow them to publish in their field which is beneficial if they plan to further their studies, and (c) to encourage interdisciplinary research in Computer Science, Electrical Engineering and Mathematics. Fellowships and Travel Grants for TTLAB members are fully funded by the
+            <a href="www.nic.com">Trinidad and Tobago Network Information Centre (TTNIC).</a>
+
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-lg-1 col-md-1">
+
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h3>News and Events</h3>
+        {{ range .Site.Params.events.event }}
+            <div class="row">
+                <div class="col-lg-7 col-md-7">
+                    {{ if isset . "link" }}
+                    <a href="{{.link}}">
+                        <h4> {{ .title | markdownify }}</h4>
+                        <p> {{.description | markdownify}}</p>
+                        <!--<p>{{.date | markdownify}}</p>-->
+                    </a>
+                    {{else}}
+                        <h4> {{ .title | markdownify }}</h4>
+                        <p> {{.description | markdownify}}</p>
+                        <!--<p>{{.date | markdownify}}</p>-->
+                    {{ end }}
+                </div>
+                {{ $url := printf "img/events/%s" .img }}
+                <div class="col-lg-4 col-md-4 box" style='background: url("{{$url | absURL}}") center center no-repeat;'>
+                    <!--<img src="{{ $url | absURL }}"-->
+                         <!--alt="{{ .title }}">-->
+                </div>
+            </div>
+
+        {{ end }}
+
+    </div>
+
+
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fttlab2016%2F%3Ffref%3Dts&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    </div>
+
+
+</div>
+
+<!--{{ if .Site.Params.services.enable }}-->
+<!--{{ partial "services.html" . }}-->
+<!--{{ end }}-->
+
+<!--{{ if .Site.Params.portfolio.enable }}-->
+<!--{{ partial "portfolio.html" . }}-->
+<!--{{ end }}-->
+
+<!--{{ if .Site.Params.about.enable }}-->
+<!--{{ partial "about.html" . }}-->
+<!--{{ end }}-->
+
+<!--{{ if .Site.Params.team.enable }}-->
+<!--{{ partial "team.html" . }}-->
+<!--{{ end }}-->
+
+<!--{{ if .Site.Params.clients_list.enable }}-->
+<!--{{ partial "clients.html" . }}-->
+<!--{{ end }}-->
+
+<!--{{ if .Site.Params.contact.enable }}-->
+<!--{{ partial "contact.html" . }}-->
+<!--{{ end }}-->
+
+<!--{{ if .Site.Params.footer.enable }}-->
+<!--{{ partial "footer.html" . }}-->
+<!--{{ end }}-->
+
+<!--{{ if .Site.Params.portfolio.enable }}-->
+<!--{{ partial "modals.html" . }}-->
+<!--{{ end }}-->
+
+{{ partial "js.html" . }}
+</body>
+</html>

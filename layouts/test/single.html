@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+{{ partial "head.html" . }}
+
+<body id="page-top" class="index">
+{{ partial "nav.html" . }}
+{{ partial "hero.html" . }}
+
+{{ .Content }}
+
+{{ partial "js.html" . }}
+</body>
+</html>
