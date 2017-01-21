@@ -1,0 +1,343 @@
+# Site settings
+baseurl = "https://tt-lab.github.io/"
+languageCode = "en-us"
+title = "Agency"
+theme = "hugo-agency-theme"
+
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+
+[params]
+  # You can use Markdown syntax for urls [text](//url.to/source) or
+  # most longer texts.
+  #
+  # All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
+  # for more icons. The icons are represented by their corresponding
+  # CSS class.
+
+  # To provide some metadata for search engines feel free to add a few
+  # information about you and your website.
+  name = "Your name"
+  description = "Your description"
+
+  # Link custom assets relative to /static
+  custom_css = []
+  custom_js  = []
+  favicon    = "favicon.ico"
+
+  # Possibility to disable external/additional fonts
+  # Exception: Fontawesome
+  disableFonts = false
+
+  # 404 error customization
+  [params.error404]
+    heading = "Page couldn't be found"
+    text = "Please visit [this page](/)"
+
+  # Optional piwik tracking
+  #[params.analytics.piwik]
+  #  URL = "https://stats.example.com"
+  #  ID = "42"
+  #  # Track all subdomains with "*.example.com"
+  #  domain = "www.example.com"
+  #  # Optional integrity check hash
+  #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
+
+  # Navigation
+  [params.navigation]
+    brand = "TTLAB"
+    # Optional logo as brand stored in img/
+    logo = "TTLAB.png"
+    services = "Services"
+    portfolio = "Portfolio"
+    about = "About"
+    team = "Team"
+    contact = "Contact"
+
+    # Add custom links. Those can be pre- and postpended to the default menu above.
+    # Use the weight attribute to order your custom links. Uncomment the example
+    # below and replace the values with your own.
+
+    # prepended links
+    #[[menu.prepend]]
+    #  url = "http://gohugo.io"
+    #  name = "Hugo"
+    #  weight = 10
+
+    # postpended links
+    [[menu.postpend]]
+      url = "http://gohugo.io"
+      name = "External link"
+      weight = 10
+
+
+  # Hero section
+  [params.hero]
+    # To change the background image of the hero, replace 'header-bg.jpg' in
+    # the 'static/img' folder.
+    title = "TTLAB"
+    subtitle = ""
+    buttonText = ""
+
+
+  # Services section
+  [params.services]
+    enable = true
+    title = "Services"
+    subtitle = "Lorem ipsum dolor sit amet consectetur."
+
+    [[params.services.row]]
+
+    [[params.services.row.list]]
+      icon = "fa-shopping-cart"
+      title = "E-Commerce"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      url = "#"
+
+    [[params.services.row.list]]
+      icon = "fa-laptop"
+      title = "Responsive Design"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      url = "#"
+
+    [[params.services.row.list]]
+      icon = "fa-lock"
+      title = "Web"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      url = "#"
+
+  # Portfolio section
+  [params.portfolio]
+    enable = true
+    # All projects defined in their own files. You can find example projects
+    # at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
+    # at the root of this Hugo site.
+    # For more informtion take a look at the README.
+    title = "Portfolio"
+    subtitle = "Lorem ipsum dolor sit amet consectetur."
+
+    [params.portfolio.modal]
+      client = "Client"
+      date = "Date"
+      category = "Category"
+      buttonText = "Close project"
+
+
+    # About section
+  [params.about]
+    enable = true
+    title = "About"
+    subtitle = "Lorem ipsum dolor sit amet consectetur."
+    endpoint = "Be part<br>of our<br>story!"
+
+    # The events will be listed from the top to the bottom.
+    # All images are stored under 'static/img/about'.
+    # Replace them with your own.
+    [[params.about.events]]
+      img = "1.jpg"
+      date = "2009-2011"
+      title = "Our Humble Beginnings"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+
+    [[params.about.events]]
+      img = "2.jpg"
+      date = "March 2011"
+      title = "An Agency is Born"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+
+    [[params.about.events]]
+      img = "3.jpg"
+      date = "December 2012"
+      title = "Our Humble Beginnings"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+
+    [[params.about.events]]
+      img = "4.jpg"
+      date = "July 2014"
+      title = "Phase Two Expansion"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+
+
+  # Team section
+  [params.team]
+    enable = true
+    # Possibility to center items
+    #center = true
+    title = "Members"
+    subtitle = "First-Class Honour Graduates"
+    #description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
+    description = " "
+
+    # All team member's pictures are stored under 'static/img/team'.
+    # Replace them with your own too.
+    # Suggestion: Image size should be at least 360px*360px or the alignment might be affected.
+    [[params.team.members]]
+      img = "patrickhosein.jpg"
+      name = "Patrick Hosein"
+      position = "Director"
+      scope = [
+              "B.Sc, MIT, 1983",
+              "M.Sc, MIT, 1985",
+              "PhD, MIT, 1989"
+          ]
+      # For bio markdown and even multiline strings are available.
+      bio = """Patrick attended the Massachusetts Institute of Technology (MIT)  where he obtained five degrees including a PhD in Electrical Engineering and Computer Science. He has worked at Bose Corporation, Bell Laboratories, AT&T Laboratories, Ericsson and Huawei.
+              He has published extensively with over 80 refereed journal and conference publications. He holds 39 granted and 42 pending patents in the areas of telecommunications and wireless technologies. He was nominated for the Ericsson Inventor of the Year award in 2004, was the Huawei US Wireless Research Employee of the year for 2007 and is a 2015 Anthony Sabga Caribbean Laureate for Science and Technology. Patrick is presently the administrative and technical contact for the TT top level domain, CEO of the TTNIC and a Professor of Computer Science at the University of the West Indies. His present areas of research include radio resource management, QoS and pricing for 5G cellular networks.
+          """
+      social = [
+        ["fa-envelope", "mailto:patrick.hosein@sta.uwi.edu"],
+        ["fa-linkedin", "https://tt.linkedin.com/in/phosein"]
+      ]
+      center = true
+
+    [[params.team.members]]
+      img = "shellyannsooklal.jpg"
+      name = "Shellyann Sooklal"
+      position = "PhD Fellow"
+      scope = [
+        "M.Phil, The University Of The West Indies",
+        "B.Sc, The University of the West Indies",
+        " "
+      ]
+      bio = """ Shellyann is a student at the University of the West Indies (UWI), pursuing her PhD degree in Computer Science, where the emphasis of her research is in Genomics. Shellyann is also currently teaching a Masters level course in Advanced Networking at UWI. Shellyann graduated with her Undergraduate degree at UWI in 2010, with first class honors and went on to build her professional career by working as a Software Developer at Medullan. Shellyann returned to UWI in 2012 where she pursued an MPhil in Computer Science, with her research focusing around diagnosing and rating Parkinson’s Tremors using the Kinect. Shellyann has worked as a tutor, teaching assistant, instructor and part-time lecturer at UWI, teaching a wide range of courses, including programming in C, Java, Android and game programming, Data Structures and Design and Analysis of Algorithms. She also managed level 3 projects and taught web development and database systems.
+      """
+      social = [
+        ["fa-envelope", "mailto:shellyann.sooklal@gmail.com"],
+      ]
+      center = true
+
+    [[params.team.members]]
+      img = "kiran.png"
+      name = "Kiran Maharaj"
+      position = "PhD Fellow"
+      scope = [
+        "M.Sc, University of Bristol",
+        "B.Sc, The University of the West Indies"
+      ]
+      bio = """Kiran graduated from the University of Bristol with a MSc Advanced Computing - Machine Learning, Data Mining and High Performance Computing, he was awarded a postgraduate scholarship to pursue this degree from the Government of Trinidad and Tobago. Previous to this he graduated with First Class Honours from The University of the West Indies in 2013 with a B.Sc. in Computer Science. Kiran has worked as a software developer on a range of projects the most recent being AgriNeTT, an ICT initiative for the Agricultural Sector. Kiran has broad interests in Bioinformatics, Machine Learning and Data Analytics."""
+      social = [
+        ["fa-envelope", "mailto:kiranma@hotmail.com"]
+      ]
+
+    [[params.team.members]]
+    img = "inzamamrahaman.jpg"
+    name = "Inzamam Rahaman"
+    position = "MPhil Fellow"
+    scope = [
+        "B.Sc, The University of the West Indies"
+    ]
+    bio = """Inzamam Rahaman graduated with a BSc in Computer Science from The University of the West Indies, St. Augustine. During his penultimate year, he worked under the AgriNeTT project developing models for crop price prediction and developing web applications for agricultural data visualisation. For his undergraduate project, he adapted a VQ Index Based Steganography technique to an FPGA using VHDL. In the period immediately following his degree, he interned at the NASA Ames Research Centre developing geospatial web applications using NASA’s Web World Wind SDK. In addition to working as an MPhil Fellow of TTLAB, he is also a teaching assistant for the Department of Computing and Information Technology. His present areas of research interest are in Social Network Analysis, Data Mining, and Artifical Intelligence"""
+    social = [
+        ["fa-envelope", "mailto:kiranma@hotmail.com"],
+        ["fa-github", "https://github.com/InzamamRahaman"],
+        ["fa-home", "https://inzamamrahaman.github.io/"]
+    ]
+
+  # Client section
+    [params.clients_list]
+      enable = true
+      # Possibility to center items
+      #center = true
+      # Optional client title specifying the involvement
+      #title = "Used and trusted by"
+
+      # All the clients' logos are stored under 'static/img/logos'.
+      # Replace them with your clients's logos.
+      # Suggestion: .svg in the size of 280px*80px looks good
+      [[params.clients]]
+        logo = "envato.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "designmodo.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "themeforest.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "creative-market.jpg"
+        link = "#"
+
+  # Contact section
+  [params.contact]
+    enable = true
+    title = "Contact us"
+    subtitle  = "Lorem ipsum dolor sit amet consectetur."
+    buttonText = "Send message"
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+
+    # It is possible to substitute formspring with other providers
+    # as an example the mailout plugin from caddy.
+    # Provide the post URL for the form and depending on the provider
+    # add some custom JS script to finish the implementation.
+    # postURL = "https://example.com/mailout/"
+
+    email = "your@email.com"
+
+    # Success and error message overwrite for async contact form
+    #thanks = "Thank you for awesomely contacting us."
+    #error = "Message could not be send. Please contact us at mail@example.com instead."
+
+    # 'warning' defines error messages for invalid inputs
+    [params.contact.form.name]
+      text = "Your Name *"
+      warning = "Please enter your name."
+
+    [params.contact.form.email]
+      text = "Your Email *"
+      warning = "Please enter your email address."
+
+    [params.contact.form.phone]
+      text = "Your Phone *"
+      warning = "Please enter your phone number."
+
+    [params.contact.form.message]
+      text = "Your Message *"
+      warning = "Please enter a message."
+
+      # Add optional form fields to identify contact forms
+      #[[params.contact.form.hidden]]
+      #  name = "someID"
+      #  value = "example.com"
+      #
+      #[[params.contact.form.hidden]]
+      # Special values for name such as "page" and "site" will be autofilled
+      #  name = "page"
+
+  # Footer section
+  [params.footer]
+    enable = true
+    copyright = "Published under the Apache License 2.0."
+
+    [[params.footer.social]]
+      icon = "fa-twitter"
+      link = "#"
+
+    [[params.footer.social]]
+      icon = "fa-facebook"
+      link = "#"
+
+    [[params.footer.social]]
+      icon = "fa-linkedin"
+      link = "#"
+
+    [[params.footer.quicklinks]]
+      text = "Privacy Policy"
+      link = "#"
+
+    [[params.footer.quicklinks]]
+      text = "Terms of Use"
+      link = "#"
